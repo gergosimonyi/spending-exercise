@@ -1,8 +1,9 @@
 import React from "react";
+
 import { LdsDualRing } from "./LdsDualRing";
 import { LoaderStyles } from "./Loader.styles";
 
-export default function Loader() {
+const Loader = () => {
   return (
     <>
       <LoaderStyles>
@@ -10,4 +11,6 @@ export default function Loader() {
       </LoaderStyles>
     </>
   );
-}
+};
+
+export { Loader };

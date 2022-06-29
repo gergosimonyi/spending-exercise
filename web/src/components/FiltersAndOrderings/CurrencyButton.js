@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CurrencyButton = styled.button`
+const CurrencyButton = styled.button`
   border: none;
   font-family: var(--font-family);
   font-size: 20px;
@@ -15,3 +15,5 @@ export const CurrencyButton = styled.button`
   border-radius: 8px;
   padding: 6px 12px;
 `;
+
+export { CurrencyButton };

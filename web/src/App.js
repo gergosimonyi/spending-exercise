@@ -1,11 +1,12 @@
 import React from "react";
-import Header from "./components/Header/Header";
-import Form from "./components/Form/Form";
-import FiltersAndOrderings from "./components/FiltersAndOrderings/FiltersAndOrderings";
-import SpendingList from "./components/SpendingList/SpendingList";
-import { Main } from "./styles/ComponentStyles";
 
-export default function App() {
+import { FiltersAndOrderings } from "components/FiltersAndOrderings/FiltersAndOrderings";
+import { Form } from "components/Form/Form";
+import { Header } from "components/Header/Header";
+import { Main } from "styles/ComponentStyles";
+import { SpendingList } from "components/SpendingList/SpendingList";
+
+const App = () => {
   return (
     <>
       <Header />
@@ -16,4 +17,6 @@ export default function App() {
       </Main>
     </>
   );
-}
+};
+
+export { App };

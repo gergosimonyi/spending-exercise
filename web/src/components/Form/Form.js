@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+
+import { currencies, defaultCurrency } from "constants/currencies";
+
+import { FormStyles } from "./Form.styles";
 import { InputStyles } from "./Input.styles";
 import { SelectStyles } from "./Select.styles";
-import { FormStyles } from "./Form.styles";
-import { currencies, defaultCurrency } from "../../constants/currencies";
 
-export default function Form() {
+const Form = () => {
   const [state, setState] = useState({
     description: "",
     amount: 0,
@@ -52,4 +54,6 @@ export default function Form() {
       </FormStyles>
     </>
   );
-}
+};
+
+export { Form };

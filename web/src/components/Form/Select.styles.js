@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SelectStyles = styled.select`
+const SelectStyles = styled.select`
   appearance: none;
   border: none;
   margin: 0;
@@ -17,3 +17,5 @@ export const SelectStyles = styled.select`
   box-shadow: var(--box-shadow);
   min-width: 80px;
 `;
+
+export { SelectStyles };

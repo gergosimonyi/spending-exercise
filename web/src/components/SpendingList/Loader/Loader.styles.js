@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LoaderStyles = styled.div`
+const LoaderStyles = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -10,3 +10,5 @@ export const LoaderStyles = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+export { LoaderStyles };

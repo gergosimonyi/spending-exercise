@@ -1,14 +1,15 @@
 import React from "react";
 
-import { FiltersWrapper } from "./FiltersWrapper";
-import { CurrencyFilters } from "./CurrencyFilters";
+import { currencies } from "constants/currencies";
+
 import { CurrencyButton } from "./CurrencyButton";
+import { CurrencyFilters } from "./CurrencyFilters";
+import { FiltersWrapper } from "./FiltersWrapper";
 import { Orderings } from "./Orderings";
-import { currencies } from "../../constants/currencies";
 
 const currencyFilterOptions = ["ALL", ...currencies];
 
-export default function CurrencyFilter() {
+const FiltersAndOrderings = () => {
   return (
     <>
       <FiltersWrapper>
@@ -32,4 +33,6 @@ export default function CurrencyFilter() {
       </FiltersWrapper>
     </>
   );
-}
+};
+
+export { FiltersAndOrderings };

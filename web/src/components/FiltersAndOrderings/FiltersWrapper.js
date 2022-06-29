@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FiltersWrapper = styled.div`
+const FiltersWrapper = styled.div`
   display: flex;
   margin-bottom: 2rem;
 
@@ -8,3 +8,5 @@ export const FiltersWrapper = styled.div`
     flex-direction: column;
   }
 `;
+
+export { FiltersWrapper };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const AmountWrapper = styled.div`
+const AmountWrapper = styled.div`
   margin-left: auto;
   margin-right: 1rem;
 
@@ -8,3 +8,5 @@ export const AmountWrapper = styled.div`
     margin: 0.5rem 0;
   }
 `;
+
+export { AmountWrapper };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const LdsDualRing = styled.div`
+const LdsDualRing = styled.div`
   display: inline-block;
   width: 80px;
   height: 80px;
@@ -26,3 +26,5 @@ export const LdsDualRing = styled.div`
     }
   }
 `;
+
+export { LdsDualRing };

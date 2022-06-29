@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ErrorMessage = styled.h1`
+const ErrorMessage = styled.h1`
   text-align: center;
   margin: 4rem auto;
   font-size: 20px;
@@ -10,3 +10,5 @@ export const ErrorMessage = styled.h1`
   border-radius: 8px;
   max-width: 80%;
 `;
+
+export { ErrorMessage };

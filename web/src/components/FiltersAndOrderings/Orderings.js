@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Orderings = styled.div`
+const Orderings = styled.div`
   display: flex;
   align-items: center;
 
@@ -20,3 +20,5 @@ export const Orderings = styled.div`
     border: 1px solid var(--color-dark-gray);
   }
 `;
+
+export { Orderings };

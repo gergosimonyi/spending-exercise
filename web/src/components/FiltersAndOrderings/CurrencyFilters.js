@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CurrencyFilters = styled.ul`
+const CurrencyFilters = styled.ul`
   list-style-type: none;
   display: flex;
   padding: 0;
@@ -11,3 +11,5 @@ export const CurrencyFilters = styled.ul`
     margin-left: unset;
   }
 `;
+
+export { CurrencyFilters };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const IconWrapper = styled.div`
+const IconWrapper = styled.div`
   padding: 8px;
   line-height: 0;
   background-color: var(--color-light-blue);
@@ -21,3 +21,5 @@ export const IconWrapper = styled.div`
     }
   }
 `;
+
+export { IconWrapper };

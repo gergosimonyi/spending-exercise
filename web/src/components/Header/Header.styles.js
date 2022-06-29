@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const HeaderStyles = styled.header`
+const HeaderStyles = styled.header`
   font-family: var(--font-family-header);
 
   max-width: 800px;
@@ -15,3 +15,5 @@ export const HeaderStyles = styled.header`
     flex-direction: column;
   }
 `;
+
+export { HeaderStyles };

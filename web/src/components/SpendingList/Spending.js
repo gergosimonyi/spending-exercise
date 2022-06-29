@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Spending = styled.article`
+const Spending = styled.article`
   border-radius: 8px;
   box-shadow: var(--box-shadow);
   padding: 1.5rem;
@@ -26,3 +26,5 @@ export const Spending = styled.article`
     padding: 1rem;
   }
 `;
+
+export { Spending };

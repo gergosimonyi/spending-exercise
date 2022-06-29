@@ -1,10 +1,13 @@
 import React from "react";
+
 import { HeaderStyles } from "./Header.styles";
 
-export default function Header() {
+const Header = () => {
   return (
     <HeaderStyles>
       <h1>Spendings</h1>
     </HeaderStyles>
   );
-}
+};
+
+export { Header };

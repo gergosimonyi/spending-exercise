@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputStyles = styled.input`
+const InputStyles = styled.input`
   font-family: var(--font-family);
   border: none;
   padding: 10px 15px;
@@ -38,3 +38,5 @@ export const InputStyles = styled.input`
     }
   }
 `;
+
+export { InputStyles };
