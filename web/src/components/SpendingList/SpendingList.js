@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 
+import { listSpendings } from "api";
+
 import { ErrorMessage } from "./ErrorMessage";
 import { Loader } from "./Loader";
 import { LineItemList } from "./LineItemList";
@@ -10,31 +12,18 @@ const SpendingList = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    fetch(`http://localhost:5000/spendings`, {
-      method: "GET",
-      headers: { "Content-Type": "application/json" },
-    })
-      .then(async (res) => {
-        const body = await res.json();
-        return {
-          status: res.status,
-          body,
-        };
-      })
-      .then((response) => {
-        if (response.status === 200) {
-          setSpendings(response.body);
-        }
-      })
-      .catch((err) => {
-        console.error(err);
+    (async () => {
+      setLoading(true);
+
+      try {
+        setSpendings(await listSpendings());
+      } catch {
         setError(true);
-      })
-      .finally(() => {
+      } finally {
         setLoading(false);
-      });
-  }, [setSpendings]);
+      }
+    })();
+  }, []);
 
   if (loading) return <Loader />;
   if (error) return <ErrorMessage />;
