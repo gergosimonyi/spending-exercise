@@ -12,7 +12,7 @@ class SpendingsControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index with currency and order" do
     ['', 'USD', 'HUF'].each do |currency|
-      ['', '-date', 'date', '-value', 'value'].each do |order|
+      ['', '-spent_at', 'spent_at', '-value', 'value'].each do |order|
         get "#{spendings_url}?currency=#{currency}&order=#{order}", as: :json
         assert_response :success
 
@@ -24,7 +24,6 @@ class SpendingsControllerTest < ActionDispatch::IntegrationTest
 
         if order.present?
           order_by = order.gsub('-', '').to_sym
-          order_by = :spent_at if order_by == :date
           descending = order[0] == '-'
 
           sorted = data.sort_by { |spending| spending[order_by] }

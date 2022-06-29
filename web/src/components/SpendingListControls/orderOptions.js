@@ -1,11 +1,11 @@
 const orderOptions = [
   {
     description: "Sort by Date descending (default)",
-    value: "-date",
+    value: "-spent_at",
   },
   {
     description: "Sort by Date ascending",
-    value: "date",
+    value: "spent_at",
   },
   {
     description: "Sort by Value descending",

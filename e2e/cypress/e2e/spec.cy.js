@@ -128,10 +128,10 @@ describe("spending-exercise app", () => {
     // When I change the selected ordering
     // Then the list is reorder by the selection
 
-    cy.get('select[name="order"]').select("-date");
+    cy.get('select[name="order"]').select("-spent_at");
     listMatches(creationOrder.slice().reverse());
 
-    cy.get('select[name="order"]').select("date");
+    cy.get('select[name="order"]').select("spent_at");
     listMatches(creationOrder);
 
     cy.get('select[name="order"]').select("-value");

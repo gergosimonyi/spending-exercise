@@ -8,9 +8,9 @@ class SpendingsController < ApplicationController
 
     if params[:order].present?
       order = case params[:order]
-              when 'date'
+              when 'spent_at'
                 { spent_at: :asc }
-              when '-date'
+              when '-spent_at'
                 { spent_at: :desc }
               when 'value'
                 { value: :asc }
