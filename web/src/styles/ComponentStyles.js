@@ -66,21 +66,16 @@ export const FormStyles = styled.form`
 `;
 
 export const HeaderStyles = styled.header`
-  margin-bottom: 4rem;
   font-family: var(--font-family-header);
 
-  @media (max-width: 756px) {
-    margin-bottom: 2rem;
-  }
-`;
-
-export const FlexWrapper = styled.div`
   max-width: 800px;
-  margin: 1rem auto;
+  margin: 1rem auto 4rem;
+
   display: flex;
   align-items: center;
 
   @media (max-width: 756px) {
+    margin-bottom: 2rem;
     justify-content: center;
     flex-direction: column;
   }
