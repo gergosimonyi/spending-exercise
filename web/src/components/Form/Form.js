@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 
 import { createSpending } from "api";
 import { currencies, defaultCurrency } from "constants";
@@ -15,6 +15,7 @@ const defaultState = {
 
 const Form = ({ onSuccess }) => {
   const [state, setState] = useState({ ...defaultState });
+  const firstFormField = useRef(null);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -37,6 +38,7 @@ const Form = ({ onSuccess }) => {
     onSuccess(persistedSpending);
 
     setState({ ...defaultState });
+    firstFormField.current.focus();
   };
 
   return (
@@ -48,6 +50,7 @@ const Form = ({ onSuccess }) => {
           name="description"
           value={state.description}
           onChange={handleChange}
+          ref={firstFormField}
         />
         <InputStyles
           type="number"
