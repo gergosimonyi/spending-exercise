@@ -33,8 +33,6 @@ export const CurrencyButton = styled.button`
   font-weight: ${(p) => (p.name === p.currencyFilter ? "700" : "400")};
   border-radius: 8px;
   padding: 6px 12px;
-  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
 `;
 
 export const Orderings = styled.div`
@@ -55,8 +53,6 @@ export const Orderings = styled.div`
     font-size: 18px;
     border-radius: 8px;
     border: 1px solid darkgray;
-    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
   }
 `;
 
