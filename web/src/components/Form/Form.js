@@ -13,14 +13,14 @@ const Form = () => {
     currency: defaultCurrency,
   });
 
-  function handleChange(e) {
-    const { name, value } = e.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
     setState({
       ...state,
       [name]: value,
     });
-  }
+  };
 
   return (
     <>
