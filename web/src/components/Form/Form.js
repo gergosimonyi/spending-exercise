@@ -2,8 +2,8 @@ import React, { useState, useRef } from "react";
 
 import { createSpending } from "api";
 import { ErrorMessage } from "components";
-import { currencies, defaultCurrency } from "constants";
 import { APIError } from "errors";
+import { currencies, defaultCurrency } from "lib";
 
 import { Input, Select, Wrapper } from "./Form.styles";
 

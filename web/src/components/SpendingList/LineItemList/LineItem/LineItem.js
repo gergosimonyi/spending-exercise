@@ -2,7 +2,7 @@ import React from "react";
 import { FiDollarSign } from "react-icons/fi";
 import { DateTime } from "luxon";
 
-import { getLocale } from "constants";
+import { getLocale } from "lib";
 
 import { Amount, Description, Icon, Wrapper } from "./LineItem.styles";
 
