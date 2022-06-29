@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
 
 import { createSpending } from "api";
+import { ErrorMessage } from "components";
 import { currencies, defaultCurrency } from "constants";
+import { APIError } from "errors";
 
 import { FormStyles } from "./Form.styles";
 import { InputStyles } from "./Input.styles";
@@ -15,6 +17,7 @@ const defaultState = {
 
 const Form = ({ onSuccess }) => {
   const [state, setState] = useState({ ...defaultState });
+  const [error, setError] = useState("");
   const firstFormField = useRef(null);
 
   const handleChange = (event) => {
@@ -34,11 +37,20 @@ const Form = ({ onSuccess }) => {
       amount: 100 * state.amount,
     };
 
-    const persistedSpending = await createSpending(spending);
-    onSuccess(persistedSpending);
+    try {
+      const persistedSpending = await createSpending(spending);
+      onSuccess(persistedSpending);
 
-    setState({ ...defaultState });
-    firstFormField.current.focus();
+      setError("");
+      setState({ ...defaultState });
+      firstFormField.current.focus();
+    } catch (error) {
+      if (error instanceof APIError) {
+        setError(error.message);
+      } else {
+        setError("The server is probably down. Please try again later.");
+      }
+    }
   };
 
   return (
@@ -72,6 +84,7 @@ const Form = ({ onSuccess }) => {
         </SelectStyles>
         <InputStyles type="submit" value="Save" />
       </FormStyles>
+      {error && <ErrorMessage>{error}</ErrorMessage>}
     </>
   );
 };

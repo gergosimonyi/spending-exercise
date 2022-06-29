@@ -1,3 +1,5 @@
+import { APIError } from "errors";
+
 import { endpoints } from "..";
 
 const createSpending = async (spending) => {
@@ -9,8 +11,13 @@ const createSpending = async (spending) => {
     },
     body: JSON.stringify(spending),
   });
-  const persistedSpending = await response.json();
 
+  if (response.status >= 400) {
+    const error = await response.json();
+    throw new APIError(error.message);
+  }
+
+  const persistedSpending = await response.json();
   return persistedSpending;
 };
 
