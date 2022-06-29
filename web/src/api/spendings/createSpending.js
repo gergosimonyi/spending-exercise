@@ -12,9 +12,17 @@ const createSpending = async (spending) => {
     body: JSON.stringify(spending),
   });
 
-  if (response.status >= 400) {
-    const error = await response.json();
-    throw new APIError(error.message);
+  if (400 <= response.status && response.status < 500) {
+    const errors = await response.json();
+    const errorsArray = [];
+
+    for (let key in errors) {
+      errors[key].forEach((error) => {
+        errorsArray.push(`${key}: ${error}`);
+      });
+    }
+
+    throw new APIError(errorsArray);
   }
 
   const persistedSpending = await response.json();

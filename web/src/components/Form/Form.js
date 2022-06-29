@@ -17,7 +17,7 @@ const defaultState = {
 
 const Form = ({ onSuccess }) => {
   const [state, setState] = useState({ ...defaultState });
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState([]);
   const firstFormField = useRef(null);
 
   const handleChange = (event) => {
@@ -41,14 +41,14 @@ const Form = ({ onSuccess }) => {
       const persistedSpending = await createSpending(spending);
       onSuccess(persistedSpending);
 
-      setError("");
+      setErrors([]);
       setState({ ...defaultState });
       firstFormField.current.focus();
     } catch (error) {
       if (error instanceof APIError) {
-        setError(error.message);
+        setErrors(error.getErrors());
       } else {
-        setError("The server is probably down. Please try again later.");
+        setErrors(["Unknown error"]);
       }
     }
   };
@@ -84,7 +84,15 @@ const Form = ({ onSuccess }) => {
         </SelectStyles>
         <InputStyles type="submit" value="Save" />
       </FormStyles>
-      {error && <ErrorMessage>{error}</ErrorMessage>}
+      {errors.length > 0 && (
+        <ErrorMessage>
+          <ul>
+            {errors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+        </ErrorMessage>
+      )}
     </>
   );
 };

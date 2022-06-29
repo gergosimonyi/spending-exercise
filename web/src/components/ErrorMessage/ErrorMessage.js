@@ -9,6 +9,10 @@ const ErrorMessage = styled.h1`
   padding: 10px 15px;
   border-radius: 8px;
   max-width: 80%;
+
+  ul {
+    text-align: initial;
+  }
 `;
 
 export { ErrorMessage };
