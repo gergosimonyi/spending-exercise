@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Form, SpendingList, SpendingListControls } from "components";
 
 import { SpendingsPageStyles } from "./SpendingsPage.styles";
 import { Header } from "./Header/";
 
-const SpendingsPage = () => (
-  <SpendingsPageStyles>
-    <Header />
-    <main>
-      <Form />
-      <SpendingListControls />
-      <SpendingList />
-    </main>
-  </SpendingsPageStyles>
-);
+const SpendingsPage = () => {
+  const [newestSpending, setNewestSpending] = useState(null);
+  const onSuccess = (spending) => {
+    setNewestSpending(spending);
+  };
+
+  return (
+    <SpendingsPageStyles>
+      <Header />
+      <main>
+        <Form onSuccess={onSuccess} />
+        <SpendingListControls />
+        <SpendingList newestSpending={newestSpending} />
+      </main>
+    </SpendingsPageStyles>
+  );
+};
 
 export { SpendingsPage };

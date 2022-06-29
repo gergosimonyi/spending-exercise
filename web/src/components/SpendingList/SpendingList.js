@@ -6,7 +6,7 @@ import { ErrorMessage } from "./ErrorMessage";
 import { Loader } from "./Loader";
 import { LineItemList } from "./LineItemList";
 
-const SpendingList = () => {
+const SpendingList = ({ newestSpending }) => {
   const [spendings, setSpendings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -23,7 +23,7 @@ const SpendingList = () => {
         setLoading(false);
       }
     })();
-  }, []);
+  }, [newestSpending]);
 
   if (loading) return <Loader />;
   if (error) return <ErrorMessage />;

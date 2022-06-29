@@ -7,7 +7,7 @@ import { FormStyles } from "./Form.styles";
 import { InputStyles } from "./Input.styles";
 import { SelectStyles } from "./Select.styles";
 
-const Form = () => {
+const Form = ({ onSuccess }) => {
   const [state, setState] = useState({
     description: "",
     amount: 0,
@@ -31,7 +31,8 @@ const Form = () => {
       amount: 100 * state.amount,
     };
 
-    await createSpending(spending);
+    const persistedSpending = await createSpending(spending);
+    onSuccess(persistedSpending);
   };
 
   return (
