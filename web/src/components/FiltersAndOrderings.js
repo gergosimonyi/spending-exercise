@@ -7,7 +7,7 @@ import {
   CurrencyButton,
 } from "../styles/ComponentStyles";
 
-export default function CurrencyFilter({}) {
+export default function CurrencyFilter() {
   return (
     <>
       <FiltersWrapper>
