@@ -1,5 +1,6 @@
 import React from "react";
-import { LoaderStyles, LdsDualRing } from "../styles/ComponentStyles";
+import { LdsDualRing } from "./LdsDualRing";
+import { LoaderStyles } from "./Loader.styles";
 
 export default function Loader() {
   return (

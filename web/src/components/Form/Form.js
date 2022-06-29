@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { InputStyles } from "../styles/InputStyles";
-import { SelectStyles } from "../styles/SelectStyles";
-import { FormStyles } from "../styles/ComponentStyles";
-import { currencies, defaultCurrency } from "../constants/currencies";
+import { InputStyles } from "./Input.styles";
+import { SelectStyles } from "./Select.styles";
+import { FormStyles } from "./Form.styles";
+import { currencies, defaultCurrency } from "../../constants/currencies";
 
 export default function Form() {
   const [state, setState] = useState({

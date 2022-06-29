@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { FiDollarSign } from "react-icons/fi";
 import { DateTime } from "luxon";
-import Loader from "./Loader";
-import {
-  ErrorMessage,
-  Spending,
-  IconWrapper,
-  TextWrapper,
-  AmountWrapper,
-} from "../styles/ComponentStyles";
-import { getLocale } from "../constants/locale";
+import Loader from "./Loader/Loader";
+import { ErrorMessage } from "./ErrorMessage";
+import { Spending } from "./Spending";
+import { IconWrapper } from "./IconWrapper";
+import { TextWrapper } from "./TextWrapper";
+import { AmountWrapper } from "./AmountWrapper";
+import { getLocale } from "../../constants/locale";
 
 export default function SpendingList() {
   const [spendings, setSpendings] = useState([]);

@@ -1,12 +1,10 @@
 import React from "react";
 
-import {
-  FiltersWrapper,
-  Orderings,
-  CurrencyFilters,
-  CurrencyButton,
-} from "../styles/ComponentStyles";
-import { currencies } from "../constants/currencies";
+import { FiltersWrapper } from "./FiltersWrapper";
+import { CurrencyFilters } from "./CurrencyFilters";
+import { CurrencyButton } from "./CurrencyButton";
+import { Orderings } from "./Orderings";
+import { currencies } from "../../constants/currencies";
 
 const currencyFilterOptions = ["ALL", ...currencies];
 
