@@ -5,7 +5,7 @@ import { ErrorMessage } from "components";
 import { currencies, defaultCurrency } from "constants";
 import { APIError } from "errors";
 
-import { FormStyles, InputStyles, SelectStyles } from "./Form.styles";
+import { Input, Select, Wrapper } from "./Form.styles";
 
 const defaultState = {
   description: "",
@@ -53,8 +53,8 @@ const Form = ({ onSuccess }) => {
 
   return (
     <>
-      <FormStyles onSubmit={handleSubmit}>
-        <InputStyles
+      <Wrapper onSubmit={handleSubmit}>
+        <Input
           type="text"
           placeholder="description"
           name="description"
@@ -62,26 +62,22 @@ const Form = ({ onSuccess }) => {
           onChange={handleChange}
           ref={firstFormField}
         />
-        <InputStyles
+        <Input
           type="number"
           placeholder="amount"
           name="amount"
           value={state.amount}
           onChange={handleChange}
         />
-        <SelectStyles
-          name="currency"
-          value={state.currency}
-          onChange={handleChange}
-        >
+        <Select name="currency" value={state.currency} onChange={handleChange}>
           {currencies.map((currency) => (
             <option key={currency} value={currency}>
               {currency}
             </option>
           ))}
-        </SelectStyles>
-        <InputStyles type="submit" value="Save" />
-      </FormStyles>
+        </Select>
+        <Input type="submit" value="Save" />
+      </Wrapper>
       {errors.length > 0 && (
         <ErrorMessage>
           <ul>

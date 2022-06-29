@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LineItemStyles = styled.li`
+const Wrapper = styled.li`
   border-radius: 8px;
   box-shadow: var(--box-shadow);
   padding: 1.5rem;
@@ -65,4 +65,4 @@ const Icon = styled.div`
   }
 `;
 
-export { LineItemStyles, Amount, Description, Icon };
+export { Wrapper, Amount, Description, Icon };

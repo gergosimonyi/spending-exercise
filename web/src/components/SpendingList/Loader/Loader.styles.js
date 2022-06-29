@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LoaderStyles = styled.div`
+const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,4 +33,4 @@ const LdsDualRing = styled.div`
   }
 `;
 
-export { LoaderStyles, LdsDualRing };
+export { Wrapper, LdsDualRing };

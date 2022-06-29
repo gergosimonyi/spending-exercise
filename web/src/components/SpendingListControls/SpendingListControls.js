@@ -3,10 +3,10 @@ import React from "react";
 import { currencyOptions } from "./currencyOptions";
 import { orderOptions } from "./orderOptions";
 import {
-  CurrencyButton,
-  CurrencyFilters,
-  FiltersWrapper,
-  Orderings,
+  Button,
+  Currencies,
+  Orders,
+  Wrapper,
 } from "./SpendingListControls.styles";
 
 const SpendingListControls = ({ currency, setCurrency, setOrder }) => {
@@ -20,8 +20,8 @@ const SpendingListControls = ({ currency, setCurrency, setOrder }) => {
 
   return (
     <>
-      <FiltersWrapper>
-        <Orderings>
+      <Wrapper>
+        <Orders>
           <select onChange={handleOrderChange}>
             {orderOptions.map((orderOption) => (
               <option key={orderOption.value} value={orderOption.value}>
@@ -29,21 +29,21 @@ const SpendingListControls = ({ currency, setCurrency, setOrder }) => {
               </option>
             ))}
           </select>
-        </Orderings>
-        <CurrencyFilters>
+        </Orders>
+        <Currencies>
           {currencyOptions.map((currencyOption) => (
             <li key={currencyOption.description}>
-              <CurrencyButton
+              <Button
                 active={currencyOption.value === currency}
                 value={currencyOption.value}
                 onClick={handleFilterChange}
               >
                 {currencyOption.description}
-              </CurrencyButton>
+              </Button>
             </li>
           ))}
-        </CurrencyFilters>
-      </FiltersWrapper>
+        </Currencies>
+      </Wrapper>
     </>
   );
 };

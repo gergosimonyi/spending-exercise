@@ -4,11 +4,11 @@ import { DateTime } from "luxon";
 
 import { getLocale } from "constants";
 
-import { Amount, Description, Icon, LineItemStyles } from "./LineItem.styles";
+import { Amount, Description, Icon, Wrapper } from "./LineItem.styles";
 
 const LineItem = ({ amount, currency, description, spent_at }) => {
   return (
-    <LineItemStyles>
+    <Wrapper>
       <Icon>
         <FiDollarSign color="var(--color-blue)" />
       </Icon>
@@ -24,7 +24,7 @@ const LineItem = ({ amount, currency, description, spent_at }) => {
           }).format((amount / 100).toFixed(2))}
         </h3>
       </Amount>
-    </LineItemStyles>
+    </Wrapper>
   );
 };
 

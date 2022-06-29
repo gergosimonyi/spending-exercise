@@ -1,7 +1,7 @@
 import React from "react";
 
 import { LineItem } from "./LineItem";
-import { LineItemListStyles } from "./LineItemList.styles";
+import { Wrapper } from "./LineItemList.styles";
 
 const LineItemList = ({ spendings }) => {
   if (spendings.length === 0) {
@@ -17,11 +17,11 @@ const LineItemList = ({ spendings }) => {
   }
 
   return (
-    <LineItemListStyles>
+    <Wrapper>
       {spendings.map((spending) => (
         <LineItem key={spending.id} {...spending} />
       ))}
-    </LineItemListStyles>
+    </Wrapper>
   );
 };
 

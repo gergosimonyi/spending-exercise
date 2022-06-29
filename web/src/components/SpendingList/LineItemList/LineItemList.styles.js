@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const LineItemListStyles = styled.ol`
+const Wrapper = styled.ol`
   padding: 0;
 `;
 
-export { LineItemListStyles };
+export { Wrapper };

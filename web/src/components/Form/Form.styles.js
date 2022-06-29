@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-const FormStyles = styled.form`
+const Wrapper = styled.form`
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 4rem;
 `;
 
-const InputStyles = styled.input`
+const Input = styled.input`
   font-family: var(--font-family);
   border: none;
   padding: 10px 15px;
@@ -46,7 +46,7 @@ const InputStyles = styled.input`
   }
 `;
 
-const SelectStyles = styled.select`
+const Select = styled.select`
   appearance: none;
   border: none;
   margin: 0;
@@ -64,4 +64,4 @@ const SelectStyles = styled.select`
   min-width: 80px;
 `;
 
-export { FormStyles, InputStyles, SelectStyles };
+export { Wrapper, Input, Select };

@@ -1,6 +1,15 @@
 import styled from "styled-components";
 
-const CurrencyButton = styled.button`
+const Wrapper = styled.div`
+  display: flex;
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const Button = styled.button`
   border: none;
   font-family: var(--font-family);
   font-size: 20px;
@@ -13,7 +22,7 @@ const CurrencyButton = styled.button`
   padding: 6px 12px;
 `;
 
-const CurrencyFilters = styled.ul`
+const Currencies = styled.ul`
   list-style-type: none;
   display: flex;
   padding: 0;
@@ -25,16 +34,7 @@ const CurrencyFilters = styled.ul`
   }
 `;
 
-const FiltersWrapper = styled.div`
-  display: flex;
-  margin-bottom: 2rem;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-`;
-
-const Orderings = styled.div`
+const Orders = styled.div`
   display: flex;
   align-items: center;
 
@@ -54,4 +54,4 @@ const Orderings = styled.div`
     border: 1px solid var(--color-dark-gray);
   }
 `;
-export { CurrencyButton, CurrencyFilters, FiltersWrapper, Orderings };
+export { Button, Currencies, Wrapper, Orders };

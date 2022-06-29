@@ -1,13 +1,13 @@
 import React from "react";
 
-import { LdsDualRing, LoaderStyles } from "./Loader.styles";
+import { LdsDualRing, Wrapper } from "./Loader.styles";
 
 const Loader = () => {
   return (
     <>
-      <LoaderStyles>
+      <Wrapper>
         <LdsDualRing color={"var(--color-blue)"} />
-      </LoaderStyles>
+      </Wrapper>
     </>
   );
 };

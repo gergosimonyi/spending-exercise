@@ -1,12 +1,12 @@
 import React from "react";
 
-import { HeaderStyles } from "./Header.styles";
+import { Wrapper } from "./Header.styles";
 
 const Header = () => {
   return (
-    <HeaderStyles>
+    <Wrapper>
       <h1>Spendings</h1>
-    </HeaderStyles>
+    </Wrapper>
   );
 };
 

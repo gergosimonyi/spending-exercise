@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HeaderStyles = styled.header`
+const Wrapper = styled.header`
   font-family: var(--font-family-header);
 
   margin-bottom: 4rem;
@@ -15,4 +15,4 @@ const HeaderStyles = styled.header`
   }
 `;
 
-export { HeaderStyles };
+export { Wrapper };

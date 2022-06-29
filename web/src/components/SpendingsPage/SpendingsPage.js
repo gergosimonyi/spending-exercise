@@ -6,7 +6,7 @@ import {
   defaultOrderOption,
 } from "components/SpendingListControls";
 
-import { SpendingsPageStyles } from "./SpendingsPage.styles";
+import { Wrapper } from "./SpendingsPage.styles";
 import { Header } from "./Header/";
 
 const SpendingsPage = () => {
@@ -19,7 +19,7 @@ const SpendingsPage = () => {
   const [order, setOrder] = useState(defaultOrderOption.value);
 
   return (
-    <SpendingsPageStyles>
+    <Wrapper>
       <Header />
       <main>
         <Form onSuccess={onSuccess} />
@@ -34,7 +34,7 @@ const SpendingsPage = () => {
           newestSpending={newestSpending}
         />
       </main>
-    </SpendingsPageStyles>
+    </Wrapper>
   );
 };
 
