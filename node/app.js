@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 app.get("/spendings", (req, res) => {
   res.send([
     {
+      id: 1,
       description: "Mango",
       amount: 1200,
       spent_at: new Date().toISOString(),
