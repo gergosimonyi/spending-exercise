@@ -67,24 +67,6 @@ export const HeaderStyles = styled.header`
   margin-bottom: 4rem;
   font-family: "Montserrat", "Poppins", var(--font-family);
 
-  ul {
-    list-style-type: none;
-    display: flex;
-    gap: 5rem;
-    text-transform: uppercase;
-  }
-
-  li {
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    line-height: 1;
-    padding: 12px 16px 8px;
-    border-radius: 8px;
-  }
-
   @media (max-width: 756px) {
     margin-bottom: 2rem;
   }
