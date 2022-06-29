@@ -37,26 +37,8 @@ const SpendingList = () => {
   }, [setSpendings]);
 
   if (loading) return <Loader />;
-
-  return (
-    <>
-      {error && (
-        <ErrorMessage>
-          The server is probably down. Please try again later.
-        </ErrorMessage>
-      )}
-      {!spendings.length && !error && (
-        <h1 style={{ textAlign: "center", marginTop: "4rem" }}>
-          Yay!{" "}
-          <span role="img" aria-label="jsx-a11y/accessible-emoji">
-            🎉
-          </span>{" "}
-          No spendings!
-        </h1>
-      )}
-      {spendings.length > 0 && <LineItemList spendings={spendings} />}
-    </>
-  );
+  if (error) return <ErrorMessage />;
+  return <LineItemList spendings={spendings} />;
 };
 
 export { SpendingList };
