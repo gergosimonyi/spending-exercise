@@ -190,16 +190,6 @@ export const AmountWrapper = styled.div`
   }
 `;
 
-export const Amount = styled.h3`
-  &::before {
-    content: "${(props) => (props.currency === "USD" ? "$" : "")}";
-  }
-
-  &::after {
-    content: "${(props) => (props.currency === "HUF" ? " HUF" : "")}";
-  }
-`;
-
 export const ErrorMessage = styled.h1`
   text-align: center;
   margin: 4rem auto;

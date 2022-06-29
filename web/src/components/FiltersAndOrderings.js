@@ -6,6 +6,9 @@ import {
   CurrencyFilters,
   CurrencyButton,
 } from "../styles/ComponentStyles";
+import { currencies } from "../constants/currencies";
+
+const currencyFilterOptions = ["ALL", ...currencies];
 
 export default function CurrencyFilter() {
   return (
@@ -20,15 +23,13 @@ export default function CurrencyFilter() {
           </select>
         </Orderings>
         <CurrencyFilters>
-          <li>
-            <CurrencyButton name="">ALL</CurrencyButton>
-          </li>
-          <li>
-            <CurrencyButton name="HUF">HUF</CurrencyButton>
-          </li>
-          <li>
-            <CurrencyButton name="USD">USD</CurrencyButton>
-          </li>
+          {currencyFilterOptions.map((currencyFilterOption) => (
+            <li key={currencyFilterOption}>
+              <CurrencyButton name={currencyFilterOption}>
+                {currencyFilterOption}
+              </CurrencyButton>
+            </li>
+          ))}
         </CurrencyFilters>
       </FiltersWrapper>
     </>

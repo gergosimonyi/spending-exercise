@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { InputStyles } from "../styles/InputStyles";
 import { SelectStyles } from "../styles/SelectStyles";
 import { FormStyles } from "../styles/ComponentStyles";
+import { currencies, defaultCurrency } from "../constants/currencies";
 
 export default function Form() {
   const [state, setState] = useState({
     description: "",
     amount: 0,
-    currency: "USD",
+    currency: defaultCurrency,
   });
 
   function handleChange(e) {
@@ -41,8 +42,11 @@ export default function Form() {
           value={state.currency}
           onChange={handleChange}
         >
-          <option value="HUF">HUF</option>
-          <option value="USD">USD</option>
+          {currencies.map((currency) => (
+            <option key={currency} value={currency}>
+              {currency}
+            </option>
+          ))}
         </SelectStyles>
         <InputStyles type="submit" value="Save" />
       </FormStyles>

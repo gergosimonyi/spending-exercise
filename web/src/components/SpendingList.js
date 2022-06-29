@@ -7,9 +7,9 @@ import {
   Spending,
   IconWrapper,
   TextWrapper,
-  Amount,
   AmountWrapper,
 } from "../styles/ComponentStyles";
+import { getLocale } from "../constants/locale";
 
 export default function SpendingList() {
   const [spendings, setSpendings] = useState([]);
@@ -76,9 +76,12 @@ export default function SpendingList() {
               </p>
             </TextWrapper>
             <AmountWrapper>
-              <Amount currency={spending.currency}>
-                {(spending.amount / 100).toFixed(2)}
-              </Amount>
+              <h3>
+                {new Intl.NumberFormat(getLocale(), {
+                  style: "currency",
+                  currency: spending.currency,
+                }).format((spending.amount / 100).toFixed(2))}
+              </h3>
             </AmountWrapper>
           </Spending>
         ))}
