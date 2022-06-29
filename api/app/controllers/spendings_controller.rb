@@ -13,9 +13,9 @@ class SpendingsController < ApplicationController
               when '-date'
                 { spent_at: :desc }
               when 'value'
-                { amount: :asc }
+                { value: :asc }
               when '-value'
-                { amount: :desc }
+                { value: :desc }
               else
                 { }
               end

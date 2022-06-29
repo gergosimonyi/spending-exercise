@@ -8,11 +8,11 @@ const orderOptions = [
     value: "date",
   },
   {
-    description: "Sort by Amount descending",
+    description: "Sort by Value descending",
     value: "-value",
   },
   {
-    description: "Sort by Amount ascending",
+    description: "Sort by Value ascending",
     value: "value",
   },
 ];
