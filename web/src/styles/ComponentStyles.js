@@ -27,7 +27,9 @@ export const CurrencyButton = styled.button`
   font-size: 20px;
   cursor: pointer;
   background-color: ${(p) =>
-    p.name === p.currencyFilter ? "#d1e7fb" : "var(--color-white)"};
+    p.name === p.currencyFilter
+      ? "var(--color-light-blue)"
+      : "var(--color-white)"};
   color: ${(p) =>
     p.name === p.currencyFilter ? "var(--color-blue)" : "inherit"};
   font-weight: ${(p) => (p.name === p.currencyFilter ? "700" : "400")};
@@ -52,7 +54,7 @@ export const Orderings = styled.div`
     font-family: var(--font-family);
     font-size: 18px;
     border-radius: 8px;
-    border: 1px solid darkgray;
+    border: 1px solid var(--color-dark-gray);
   }
 `;
 
@@ -130,8 +132,7 @@ export const LoaderStyles = styled.div`
 
 export const Spending = styled.article`
   border-radius: 8px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: var(--box-shadow);
   padding: 1.5rem;
   background-color: var(--color-white);
   display: flex;
@@ -148,7 +149,7 @@ export const Spending = styled.article`
   }
 
   p {
-    color: #adadad;
+    color: var(--color-gray);
   }
   @media (max-width: 756px) {
     flex-direction: column;
@@ -159,7 +160,7 @@ export const Spending = styled.article`
 export const IconWrapper = styled.div`
   padding: 8px;
   line-height: 0;
-  background-color: #d1e7fb;
+  background-color: var(--color-light-blue);
   border-radius: 12px;
   margin-right: 1.5rem;
 
@@ -208,7 +209,7 @@ export const ErrorMessage = styled.h1`
   text-align: center;
   margin: 4rem auto;
   font-size: 20px;
-  background-color: #fb7c7d;
+  background-color: var(--color-red);
   color: var(--color-white);
   padding: 10px 15px;
   border-radius: 8px;

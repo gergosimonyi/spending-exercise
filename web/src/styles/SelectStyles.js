@@ -14,7 +14,6 @@ export const SelectStyles = styled.select`
   font-size: 18px;
   font-weight: 700;
   border-radius: 8px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  box-shadow: var(--box-shadow);
   min-width: 80px;
 `;

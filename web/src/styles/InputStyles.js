@@ -7,9 +7,8 @@ export const InputStyles = styled.input`
   font-size: 18px;
   font-weight: 700;
   border-radius: 8px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  color: darkgray;
+  box-shadow: var(--box-shadow);
+  color: var(--color-dark-gray);
 
   &:focus {
     border-radius: 8px;
@@ -25,7 +24,7 @@ export const InputStyles = styled.input`
   }
 
   &[type="submit"] {
-    background-color: #08b783;
+    background-color: var(--color-green);
     color: var(--color-white);
     cursor: pointer;
     transition: all 0.3s;
