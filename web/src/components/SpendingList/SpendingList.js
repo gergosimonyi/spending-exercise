@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 import { listSpendings } from "api";
+import { ErrorMessage } from "components";
 
-import { ErrorMessage } from "./ErrorMessage";
 import { Loader } from "./Loader";
 import { LineItemList } from "./LineItemList";
 
@@ -26,7 +26,13 @@ const SpendingList = ({ filter, order, newestSpending }) => {
   }, [filter, order, newestSpending]);
 
   if (loading) return <Loader />;
-  if (error) return <ErrorMessage />;
+  if (error) {
+    return (
+      <ErrorMessage>
+        The server is probably down. Please try again later.
+      </ErrorMessage>
+    );
+  }
   return <LineItemList spendings={spendings} />;
 };
 
