@@ -2,10 +2,12 @@ import React from "react";
 
 import { currencyOptions } from "./currencyOptions";
 import { orderOptions } from "./orderOptions";
-import { CurrencyButton } from "./CurrencyButton";
-import { CurrencyFilters } from "./CurrencyFilters";
-import { FiltersWrapper } from "./FiltersWrapper";
-import { Orderings } from "./Orderings";
+import {
+  CurrencyButton,
+  CurrencyFilters,
+  FiltersWrapper,
+  Orderings,
+} from "./SpendingListControls.styles";
 
 const SpendingListControls = ({ currency, setCurrency, setOrder }) => {
   const handleFilterChange = (event) => {

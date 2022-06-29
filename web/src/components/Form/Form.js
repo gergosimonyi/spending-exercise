@@ -5,9 +5,7 @@ import { ErrorMessage } from "components";
 import { currencies, defaultCurrency } from "constants";
 import { APIError } from "errors";
 
-import { FormStyles } from "./Form.styles";
-import { InputStyles } from "./Input.styles";
-import { SelectStyles } from "./Select.styles";
+import { FormStyles, InputStyles, SelectStyles } from "./Form.styles";
 
 const defaultState = {
   description: "",

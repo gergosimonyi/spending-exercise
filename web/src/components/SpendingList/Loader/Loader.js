@@ -1,7 +1,6 @@
 import React from "react";
 
-import { LdsDualRing } from "./LdsDualRing";
-import { LoaderStyles } from "./Loader.styles";
+import { LdsDualRing, LoaderStyles } from "./Loader.styles";
 
 const Loader = () => {
   return (

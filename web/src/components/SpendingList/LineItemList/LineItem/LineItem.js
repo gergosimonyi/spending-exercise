@@ -4,10 +4,7 @@ import { DateTime } from "luxon";
 
 import { getLocale } from "constants";
 
-import { Amount } from "./Amount";
-import { Description } from "./Description";
-import { Icon } from "./Icon";
-import { LineItemStyles } from "./LineItem.styles";
+import { Amount, Description, Icon, LineItemStyles } from "./LineItem.styles";
 
 const LineItem = ({ amount, currency, description, spent_at }) => {
   return (

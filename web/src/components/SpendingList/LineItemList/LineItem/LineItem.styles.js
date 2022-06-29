@@ -27,4 +27,42 @@ const LineItemStyles = styled.li`
   }
 `;
 
-export { LineItemStyles };
+const Amount = styled.div`
+  margin-left: auto;
+  margin-right: 1rem;
+
+  @media (max-width: 768px) {
+    margin: 0.5rem 0;
+  }
+`;
+
+const Description = styled.div`
+  @media (max-width: 768px) {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+`;
+
+const Icon = styled.div`
+  padding: 8px;
+  line-height: 0;
+  background-color: var(--color-light-blue);
+  border-radius: 12px;
+  margin-right: 1.5rem;
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+`;
+
+export { LineItemStyles, Amount, Description, Icon };
