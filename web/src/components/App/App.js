@@ -1,6 +1,6 @@
 import React from "react";
 
-import { GlobalStyle } from "./GlobalStyle";
+import { GlobalStyle } from "./App.styles";
 import { Layout } from "./Layout/Layout";
 
 const App = () => {
