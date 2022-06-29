@@ -1,2 +1,2 @@
 export { endpoints } from "./endpoints";
-export { listSpendings } from "./spendings";
+export { createSpending, listSpendings } from "./spendings";

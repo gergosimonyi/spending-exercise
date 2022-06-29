@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import { createSpending } from "api";
 import { currencies, defaultCurrency } from "constants";
 
 import { FormStyles } from "./Form.styles";
@@ -22,9 +23,20 @@ const Form = () => {
     });
   };
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const spending = {
+      ...state,
+      amount: 100 * state.amount,
+    };
+
+    await createSpending(spending);
+  };
+
   return (
     <>
-      <FormStyles>
+      <FormStyles onSubmit={handleSubmit}>
         <InputStyles
           type="text"
           placeholder="description"
