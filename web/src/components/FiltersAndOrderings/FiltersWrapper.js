@@ -4,7 +4,7 @@ const FiltersWrapper = styled.div`
   display: flex;
   margin-bottom: 2rem;
 
-  @media (max-width: 756px) {
+  @media (max-width: 768px) {
     flex-direction: column;
   }
 `;

@@ -12,7 +12,7 @@ const IconWrapper = styled.div`
     height: 28px;
   }
 
-  @media (max-width: 756px) {
+  @media (max-width: 768px) {
     margin: 0;
 
     svg {

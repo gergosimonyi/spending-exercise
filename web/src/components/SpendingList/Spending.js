@@ -21,7 +21,7 @@ const Spending = styled.article`
   p {
     color: var(--color-gray);
   }
-  @media (max-width: 756px) {
+  @media (max-width: 768px) {
     flex-direction: column;
     padding: 1rem;
   }

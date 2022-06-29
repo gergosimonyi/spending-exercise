@@ -8,7 +8,7 @@ const HeaderStyles = styled.header`
   display: flex;
   align-items: center;
 
-  @media (max-width: 756px) {
+  @media (max-width: 768px) {
     margin-bottom: 2rem;
     justify-content: center;
     flex-direction: column;

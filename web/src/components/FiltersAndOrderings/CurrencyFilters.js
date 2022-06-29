@@ -7,7 +7,7 @@ const CurrencyFilters = styled.ul`
   gap: 1rem;
   margin-left: auto;
 
-  @media (max-width: 756px) {
+  @media (max-width: 768px) {
     margin-left: unset;
   }
 `;
