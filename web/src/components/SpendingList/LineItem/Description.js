@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-const TextWrapper = styled.div`
+const Description = styled.div`
   @media (max-width: 768px) {
     text-align: center;
     margin: 0.5rem 0;
   }
 `;
 
-export { TextWrapper };
+export { Description };

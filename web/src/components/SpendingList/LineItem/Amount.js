@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const AmountWrapper = styled.div`
+const Amount = styled.div`
   margin-left: auto;
   margin-right: 1rem;
 
@@ -9,4 +9,4 @@ const AmountWrapper = styled.div`
   }
 `;
 
-export { AmountWrapper };
+export { Amount };
