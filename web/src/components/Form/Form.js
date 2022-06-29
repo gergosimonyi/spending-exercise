@@ -7,12 +7,14 @@ import { FormStyles } from "./Form.styles";
 import { InputStyles } from "./Input.styles";
 import { SelectStyles } from "./Select.styles";
 
+const defaultState = {
+  description: "",
+  amount: 0,
+  currency: defaultCurrency,
+};
+
 const Form = ({ onSuccess }) => {
-  const [state, setState] = useState({
-    description: "",
-    amount: 0,
-    currency: defaultCurrency,
-  });
+  const [state, setState] = useState({ ...defaultState });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -33,6 +35,8 @@ const Form = ({ onSuccess }) => {
 
     const persistedSpending = await createSpending(spending);
     onSuccess(persistedSpending);
+
+    setState({ ...defaultState });
   };
 
   return (
