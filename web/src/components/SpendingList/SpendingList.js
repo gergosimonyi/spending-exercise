@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { ErrorMessage } from "./ErrorMessage";
 import { Loader } from "./Loader";
-import { LineItem } from "./LineItem";
+import { LineItemList } from "./LineItemList";
 
 const SpendingList = () => {
   const [spendings, setSpendings] = useState([]);
@@ -54,10 +54,7 @@ const SpendingList = () => {
           No spendings!
         </h1>
       )}
-      {spendings.length > 0 &&
-        spendings.map((spending) => (
-          <LineItem key={spending.id} {...spending} />
-        ))}
+      {spendings.length > 0 && <LineItemList spendings={spendings} />}
     </>
   );
 };

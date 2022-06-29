@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LineItemStyles = styled.article`
+const LineItemStyles = styled.li`
   border-radius: 8px;
   box-shadow: var(--box-shadow);
   padding: 1.5rem;
