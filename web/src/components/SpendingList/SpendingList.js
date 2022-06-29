@@ -17,6 +17,7 @@ const SpendingList = ({ filter, order, newestSpending }) => {
 
       try {
         setSpendings(await listSpendings({ filter, order }));
+        setError(false);
       } catch {
         setError(true);
       } finally {
