@@ -69,7 +69,12 @@ const Form = ({ onSuccess }) => {
           value={state.amount}
           onChange={handleChange}
         />
-        <Select name="currency" value={state.currency} onChange={handleChange}>
+        <Select
+          aria-label="currency"
+          name="currency"
+          value={state.currency}
+          onChange={handleChange}
+        >
           {currencies.map((currency) => (
             <option key={currency} value={currency}>
               {currency}
