@@ -6,7 +6,7 @@ import { ErrorMessage } from "./ErrorMessage";
 import { Loader } from "./Loader";
 import { LineItemList } from "./LineItemList";
 
-const SpendingList = ({ newestSpending }) => {
+const SpendingList = ({ filter, order, newestSpending }) => {
   const [spendings, setSpendings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -16,14 +16,14 @@ const SpendingList = ({ newestSpending }) => {
       setLoading(true);
 
       try {
-        setSpendings(await listSpendings());
+        setSpendings(await listSpendings({ filter, order }));
       } catch {
         setError(true);
       } finally {
         setLoading(false);
       }
     })();
-  }, [newestSpending]);
+  }, [filter, order, newestSpending]);
 
   if (loading) return <Loader />;
   if (error) return <ErrorMessage />;
