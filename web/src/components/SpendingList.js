@@ -40,7 +40,7 @@ export default function SpendingList({ spendings, setSpendings }) {
       .finally(() => {
         setLoading(false);
       });
-  }, []);
+  }, [setSpendings]);
 
   if (loading) return <Loader />;
 
