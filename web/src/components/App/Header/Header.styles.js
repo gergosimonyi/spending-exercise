@@ -3,8 +3,7 @@ import styled from "styled-components";
 const HeaderStyles = styled.header`
   font-family: var(--font-family-header);
 
-  max-width: 800px;
-  margin: 1rem auto 4rem;
+  margin-bottom: 4rem;
 
   display: flex;
   align-items: center;
