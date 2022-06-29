@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import { Form, SpendingList, SpendingListControls } from "components";
 import {
-  defaultFilterOption,
+  defaultCurrencyOption,
   defaultOrderOption,
 } from "components/SpendingListControls";
 
@@ -15,8 +15,8 @@ const SpendingsPage = () => {
     setNewestSpending(spending);
   };
 
-  const [filter, setFilter] = useState(defaultFilterOption);
-  const [order, setOrder] = useState(defaultOrderOption);
+  const [currency, setCurrency] = useState(defaultCurrencyOption.value);
+  const [order, setOrder] = useState(defaultOrderOption.value);
 
   return (
     <SpendingsPageStyles>
@@ -24,12 +24,12 @@ const SpendingsPage = () => {
       <main>
         <Form onSuccess={onSuccess} />
         <SpendingListControls
-          filter={filter}
-          setFilter={setFilter}
+          currency={currency}
+          setCurrency={setCurrency}
           setOrder={setOrder}
         />
         <SpendingList
-          filter={filter}
+          currency={currency}
           order={order}
           newestSpending={newestSpending}
         />

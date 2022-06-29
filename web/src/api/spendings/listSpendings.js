@@ -1,7 +1,7 @@
 import { endpoints } from "..";
 
-const listSpendings = async ({ filter, order }) => {
-  const url = `${endpoints.spendings}?filter=${filter}&order=${order}`;
+const listSpendings = async ({ currency, order }) => {
+  const url = `${endpoints.spendings}?currency=${currency}&order=${order}`;
 
   const response = await fetch(url);
   const spendings = await response.json();

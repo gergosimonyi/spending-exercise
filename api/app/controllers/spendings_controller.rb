@@ -2,19 +2,19 @@ class SpendingsController < ApplicationController
   def index
     @spendings = Spending.all
 
-    if params[:filter].present?
-      @spendings = @spendings.where(currency: params[:filter])
+    if params[:currency].present?
+      @spendings = @spendings.where(currency: params[:currency])
     end
 
     if params[:order].present?
       order = case params[:order]
-              when 'dateAscending'
+              when 'date'
                 { spent_at: :asc }
-              when 'dateDescending'
+              when '-date'
                 { spent_at: :desc }
-              when 'amountAscending'
+              when 'value'
                 { amount: :asc }
-              when 'amountDescending'
+              when '-value'
                 { amount: :desc }
               else
                 { }

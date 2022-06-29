@@ -1,22 +1,22 @@
 const orderOptions = [
   {
-    name: "dateDescending",
     description: "Sort by Date descending (default)",
+    value: "-date",
   },
   {
-    name: "dateAscending",
     description: "Sort by Date ascending",
+    value: "date",
   },
   {
-    name: "amountDescending",
     description: "Sort by Amount descending",
+    value: "-value",
   },
   {
-    name: "amountAscending",
     description: "Sort by Amount ascending",
+    value: "value",
   },
 ];
 
-const defaultOrderOption = orderOptions[0].name;
+const defaultOrderOption = orderOptions[0];
 
 export { orderOptions, defaultOrderOption };

@@ -1,15 +1,15 @@
 import React from "react";
 
-import { filterOptions } from "./filterOptions";
+import { currencyOptions } from "./currencyOptions";
 import { orderOptions } from "./orderOptions";
 import { CurrencyButton } from "./CurrencyButton";
 import { CurrencyFilters } from "./CurrencyFilters";
 import { FiltersWrapper } from "./FiltersWrapper";
 import { Orderings } from "./Orderings";
 
-const SpendingListControls = ({ filter, setFilter, setOrder }) => {
+const SpendingListControls = ({ currency, setCurrency, setOrder }) => {
   const handleFilterChange = (event) => {
-    setFilter(event.target.value);
+    setCurrency(event.target.value);
   };
 
   const handleOrderChange = (event) => {
@@ -22,21 +22,21 @@ const SpendingListControls = ({ filter, setFilter, setOrder }) => {
         <Orderings>
           <select onChange={handleOrderChange}>
             {orderOptions.map((orderOption) => (
-              <option key={orderOption.name} value={orderOption.name}>
+              <option key={orderOption.value} value={orderOption.value}>
                 {orderOption.description}
               </option>
             ))}
           </select>
         </Orderings>
         <CurrencyFilters>
-          {filterOptions.map((filterOption) => (
-            <li key={filterOption}>
+          {currencyOptions.map((currencyOption) => (
+            <li key={currencyOption.description}>
               <CurrencyButton
-                active={filterOption === filter}
-                value={filterOption}
+                active={currencyOption.value === currency}
+                value={currencyOption.value}
                 onClick={handleFilterChange}
               >
-                {filterOption}
+                {currencyOption.description}
               </CurrencyButton>
             </li>
           ))}
