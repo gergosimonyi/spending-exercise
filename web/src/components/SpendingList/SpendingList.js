@@ -12,18 +12,29 @@ const SpendingList = ({ currency, order, newestSpending }) => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+    let isMounted = true;
+
     (async () => {
       setLoading(true);
 
       try {
-        setSpendings(await listSpendings({ currency, order }));
+        const spendings = await listSpendings({ currency, order });
+
+        if (!isMounted) return;
+        setSpendings(spendings);
         setError(false);
       } catch {
+        if (!isMounted) return;
         setError(true);
       } finally {
+        if (!isMounted) return;
         setLoading(false);
       }
     })();
+
+    return () => {
+      isMounted = false;
+    };
   }, [currency, order, newestSpending]);
 
   if (loading) return <Loader />;
