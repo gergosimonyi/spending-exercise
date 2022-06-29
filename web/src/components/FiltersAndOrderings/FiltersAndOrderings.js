@@ -1,6 +1,6 @@
 import React from "react";
 
-import { currencies } from "constants/currencies";
+import { currencies } from "constants";
 
 import { CurrencyButton } from "./CurrencyButton";
 import { CurrencyFilters } from "./CurrencyFilters";

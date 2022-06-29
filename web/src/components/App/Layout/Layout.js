@@ -1,11 +1,9 @@
 import React from "react";
 
-import { FiltersAndOrderings } from "components/FiltersAndOrderings/FiltersAndOrderings";
-import { Form } from "components/Form/Form";
-import { SpendingList } from "components/SpendingList/SpendingList";
+import { FiltersAndOrderings, Form, SpendingList } from "components";
 
 import { LayoutStyles } from "./Layout.styles";
-import { Header } from "../Header/Header";
+import { Header } from "../Header/";
 
 const Layout = () => (
   <LayoutStyles>

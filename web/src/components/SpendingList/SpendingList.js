@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import { FiDollarSign } from "react-icons/fi";
 import { DateTime } from "luxon";
 
-import { getLocale } from "constants/locale";
+import { getLocale } from "constants";
 
 import { AmountWrapper } from "./AmountWrapper";
 import { ErrorMessage } from "./ErrorMessage";
 import { IconWrapper } from "./IconWrapper";
-import { Loader } from "./Loader/Loader";
+import { Loader } from "./Loader";
 import { Spending } from "./Spending";
 import { TextWrapper } from "./TextWrapper";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { currencies, defaultCurrency } from "constants/currencies";
+import { currencies, defaultCurrency } from "constants";
 
 import { FormStyles } from "./Form.styles";
 import { InputStyles } from "./Input.styles";

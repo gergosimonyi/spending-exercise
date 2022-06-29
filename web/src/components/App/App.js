@@ -1,7 +1,7 @@
 import React from "react";
 
 import { GlobalStyle } from "./App.styles";
-import { Layout } from "./Layout/Layout";
+import { Layout } from "./Layout";
 
 const App = () => {
   return (
