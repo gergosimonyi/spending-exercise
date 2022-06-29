@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { FiDollarSign } from "react-icons/fi";
-import { DateTime } from "luxon";
 
-import { getLocale } from "constants";
-
-import { AmountWrapper } from "./AmountWrapper";
 import { ErrorMessage } from "./ErrorMessage";
-import { IconWrapper } from "./IconWrapper";
 import { Loader } from "./Loader";
-import { Spending } from "./Spending";
-import { TextWrapper } from "./TextWrapper";
+import { LineItem } from "./LineItem";
 
 const SpendingList = () => {
   const [spendings, setSpendings] = useState([]);
@@ -63,27 +56,7 @@ const SpendingList = () => {
       )}
       {spendings.length > 0 &&
         spendings.map((spending) => (
-          <Spending key={spending.id}>
-            <IconWrapper>
-              <FiDollarSign color="var(--color-blue)" />
-            </IconWrapper>
-            <TextWrapper>
-              <h3>{spending.description}</h3>
-              <p>
-                {DateTime.fromISO(spending.spent_at).toFormat(
-                  "t - MMMM dd, yyyy"
-                )}
-              </p>
-            </TextWrapper>
-            <AmountWrapper>
-              <h3>
-                {new Intl.NumberFormat(getLocale(), {
-                  style: "currency",
-                  currency: spending.currency,
-                }).format((spending.amount / 100).toFixed(2))}
-              </h3>
-            </AmountWrapper>
-          </Spending>
+          <LineItem key={spending.id} {...spending} />
         ))}
     </>
   );

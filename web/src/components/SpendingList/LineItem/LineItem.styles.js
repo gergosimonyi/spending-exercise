@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Spending = styled.article`
+const LineItemStyles = styled.article`
   border-radius: 8px;
   box-shadow: var(--box-shadow);
   padding: 1.5rem;
@@ -27,4 +27,4 @@ const Spending = styled.article`
   }
 `;
 
-export { Spending };
+export { LineItemStyles };
