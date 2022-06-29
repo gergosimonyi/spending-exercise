@@ -65,7 +65,7 @@ export const FormStyles = styled.form`
 
 export const HeaderStyles = styled.header`
   margin-bottom: 4rem;
-  font-family: "Montserrat", "Poppins", var(--font-family);
+  font-family: var(--font-family-header);
 
   @media (max-width: 756px) {
     margin-bottom: 2rem;
