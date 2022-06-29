@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const InputStyles = styled.input`
   font-family: var(--font-family);
@@ -16,15 +16,15 @@ export const InputStyles = styled.input`
     color: var(--color-blue);
   }
 
-  &[type='text'] {
+  &[type="text"] {
     flex: 1;
   }
 
-  &[type='number'] {
+  &[type="number"] {
     width: 150px;
   }
 
-  &[type='submit'] {
+  &[type="submit"] {
     background-color: #08b783;
     color: var(--color-white);
     cursor: pointer;

@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { InputStyles } from '../styles/InputStyles';
-import { SelectStyles } from '../styles/SelectStyles';
-import { FormStyles } from '../styles/ComponentStyles';
+import React, { useState } from "react";
+import { InputStyles } from "../styles/InputStyles";
+import { SelectStyles } from "../styles/SelectStyles";
+import { FormStyles } from "../styles/ComponentStyles";
 
 export default function Form() {
   const [state, setState] = useState({
-    description: '',
+    description: "",
     amount: 0,
-    currency: 'USD',
+    currency: "USD",
   });
 
   function handleChange(e) {
@@ -23,28 +23,28 @@ export default function Form() {
     <>
       <FormStyles>
         <InputStyles
-          type='text'
-          placeholder='description'
-          name='description'
+          type="text"
+          placeholder="description"
+          name="description"
           value={state.description}
           onChange={handleChange}
         />
         <InputStyles
-          type='number'
-          placeholder='amount'
-          name='amount'
+          type="number"
+          placeholder="amount"
+          name="amount"
           value={state.amount}
           onChange={handleChange}
         />
         <SelectStyles
-          name='currency'
+          name="currency"
           value={state.currency}
           onChange={handleChange}
         >
-          <option value='HUF'>HUF</option>
-          <option value='USD'>USD</option>
+          <option value="HUF">HUF</option>
+          <option value="USD">USD</option>
         </SelectStyles>
-        <InputStyles type='submit' value='Save' />
+        <InputStyles type="submit" value="Save" />
       </FormStyles>
     </>
   );
