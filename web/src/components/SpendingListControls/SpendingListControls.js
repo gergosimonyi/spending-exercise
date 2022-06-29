@@ -22,7 +22,7 @@ const SpendingListControls = ({ currency, setCurrency, setOrder }) => {
     <>
       <Wrapper>
         <Orders>
-          <select onChange={handleOrderChange}>
+          <select onChange={handleOrderChange} name="order">
             {orderOptions.map((orderOption) => (
               <option key={orderOption.value} value={orderOption.value}>
                 {orderOption.description}
