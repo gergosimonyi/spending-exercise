@@ -1,6 +1,6 @@
 import React from "react";
 
-import { FiltersAndOrderings, Form, SpendingList } from "components";
+import { Form, SpendingList, SpendingListControls } from "components";
 
 import { SpendingsPageStyles } from "./SpendingsPage.styles";
 import { Header } from "./Header/";
@@ -10,7 +10,7 @@ const SpendingsPage = () => (
     <Header />
     <main>
       <Form />
-      <FiltersAndOrderings />
+      <SpendingListControls />
       <SpendingList />
     </main>
   </SpendingsPageStyles>

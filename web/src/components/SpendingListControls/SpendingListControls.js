@@ -9,7 +9,7 @@ import { Orderings } from "./Orderings";
 
 const currencyFilterOptions = ["ALL", ...currencies];
 
-const FiltersAndOrderings = () => {
+const SpendingListControls = () => {
   return (
     <>
       <FiltersWrapper>
@@ -35,4 +35,4 @@ const FiltersAndOrderings = () => {
   );
 };
 
-export { FiltersAndOrderings };
+export { SpendingListControls };
